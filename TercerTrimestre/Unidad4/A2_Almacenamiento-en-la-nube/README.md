@@ -5,7 +5,28 @@
 
 ## 1. Nube ajena
 
+Practicaremos el almacenamiento usando la nube de un proveedor externo.
 
+Pasos a realizar:
+* Elegir alguna de las siguientes herramientas:
+  * `DropBox`
+  * `Google Drive`
+  * `OneDrive`
+  * `Mega`
+
+Yo voy a utilizar `Google Drive`
+
+![](./images/.png)
+
+/play secret
+
+* Realizar la instalación y configuración de la herramienta elegida sobre:
+  * `Windows`
+  * `GNU/Linux`
+  * `Android`
+* Mostraremos su uso mediante ejemplos.
+
+A continuaciónles mostraré un vídeo de unos sencillos pasos de como subir y crear archivos facilmente en la nube.
 
 ![](./images/.png)
 
