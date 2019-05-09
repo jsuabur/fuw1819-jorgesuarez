@@ -12,7 +12,7 @@ Pasos a realizar:
   * `DropBox`
   * `Google Drive`
   * `OneDrive`
-  * `Mega` grtf
+  * `Mega`
 
 Yo voy a utilizar `Google Drive`
 
