@@ -1,1 +1,14 @@
-# fuw1819-jorgesuarez
+
+# Glosario de informes - FUW (18/19)
+
+---
+
+## Informes de ASIR
+
+Bienvenidos a mi glosario sobre los informes de las actividades desarrolladas en el Grado Superior de Administración de Sistemas Informáticos en Red. Concretamente en la asignatura Fundamentos de Hardware.
+
+## Índice
+
+- Tercer Trimestre
+  - Unidad4
+    - [A2 - Almacenamiento en la nube](./TercerTrimestre/Unidad4/A2_Almacenamiento-en-la-nube)
