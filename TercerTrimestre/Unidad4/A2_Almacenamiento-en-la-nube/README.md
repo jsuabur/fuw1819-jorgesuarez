@@ -12,13 +12,11 @@ Pasos a realizar:
   * `DropBox`
   * `Google Drive`
   * `OneDrive`
-  * `Mega`
+  * `Mega` grtf
 
 Yo voy a utilizar `Google Drive`
 
 ![](./images/.png)
-
-/play secret
 
 * Realizar la instalación y configuración de la herramienta elegida sobre:
   * `Windows`
