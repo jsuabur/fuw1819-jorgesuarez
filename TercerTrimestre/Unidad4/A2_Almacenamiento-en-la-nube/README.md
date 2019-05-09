@@ -32,11 +32,21 @@ A continuaciónles mostraré un vídeo de unos sencillos pasos de como subir y c
 
 ## 2. Nube propia con NextCloud Server en OpenSUSE Leap
 
-
+Vamos a utilizar un servicio de almacenamiento libre, asi qque utilizaremos NextCloud, aunque tambien pueden utilizar ownCloud.
 
 ![](./images/.png)
 
 ### 2.1. Servidor Web Apache: Instalación y configuración
+
+Instalación y configuración de Apache2
+
+Comando | Explicación
+------- | -----------
+`zypper in apache2` | Instalar Apache2.
+`systemctl start apache2` | Iniciar Apache2.
+`systemctl enable apache2` | Inicio automático del servidor apache después de reiniciar.
+
+![Instalar Apache2](./images/.png)
 
 
 
