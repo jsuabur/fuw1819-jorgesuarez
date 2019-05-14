@@ -32,7 +32,7 @@ A continuaciónles mostraré un vídeo de unos sencillos pasos de como subir y c
 
 ## 2. Nube propia con NextCloud Server en OpenSUSE Leap
 
-Vamos a utilizar un servicio de almacenamiento libre, asi qque utilizaremos NextCloud, aunque tambien pueden utilizar ownCloud.
+Vamos a utilizar un servicio de almacenamiento libre, asi que utilizaremos NextCloud, aunque tambien pueden utilizar ownCloud.
 
 ![](./images/.png)
 
@@ -90,6 +90,8 @@ Configuración para NextCloud:
 
 5. `exit;` Salir de la configuración de la base de datos.
 
+![](./images/.png)
+
 ### 2.4. NextCloud
 
 Instalación:
@@ -97,6 +99,8 @@ Instalación:
 Comando | Explicación
 ------- | -----------
 `zypper install nextcloud` | Instalar NextCloud.
+
+![](./images/.png)
 
 Configuración:
 
@@ -115,7 +119,6 @@ Configuración:
   - Database User Password: (para nextclouduser)
   - Database name: **nextcloud**
   - Hostname (como localhost)
-
 
 ![](./images/.png)
 
