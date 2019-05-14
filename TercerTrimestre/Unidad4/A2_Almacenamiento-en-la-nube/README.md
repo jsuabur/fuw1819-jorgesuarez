@@ -92,6 +92,29 @@ Configuración para NextCloud:
 
 ### 2.4. NextCloud
 
+Instalación:
+
+Comando | Explicación
+------- | -----------
+`zypper install nextcloud` | Instalar NextCloud.
+
+Configuración:
+
+1. Navegamos por el portal web de NextCloud. Abrimos http://localhost/nextcloud para instalar nuestra instancia.
+
+2. Creamos un usuario administrador con el nombre y contraseña de libre elección.
+
+3. Seleccionar el Almacenamiento y Base de Datos desplegable.
+
+4. El fichero de datos se establece en la ruta determinada.
+
+5. Debajo de Configurar Base de Datos, selecciona,os MySQL/MariaDB
+
+6. Introducimos el usuario de MariaDB para NextCloud:
+  - Database User: **nextclouduser**
+  - Database User Password: (para nextclouduser)
+  - Database name: **nextcloud**
+  - Hostname (como localhost)
 
 
 ![](./images/.png)
