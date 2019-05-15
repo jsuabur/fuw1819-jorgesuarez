@@ -116,7 +116,7 @@ Configuración:
 
 3. Seleccionar el Almacenamiento y Base de Datos desplegable.
 
-4. El fichero de datos se establece en la ruta determinada.
+4. La carpeta de datos dejamos la ruta predeterminada.
 
 5. Debajo de Configurar Base de Datos, selecciona,os MySQL/MariaDB
 
@@ -124,17 +124,27 @@ Configuración:
     - Database User: **nextclouduser**
     - Database User Password: (para nextclouduser)
     - Database name: **nextcloud**
-    - Hostname (como localhost)
+    - Hostname: **localhost**
 
-![Configurar NextCloud](./images/configure-nextclo.png)
+![Configurar NextCloud](./images/configure-nextcloud.png)
 
 ---
 
 ## 3. Comprobar vía web
 
+* Para prevenir posibles problemas, haremos una copia de seguridad del fichero de configuración `/srv/www/htdocs/nextcloud/config/config.php`.
 
+![Copia de seguridad](./images/copia-fichero.png)
 
-![](./images/.png)
+* Para permitir el acceso desde otros equipos, tenemos que añadir la IP del servidor a las opciones `trusted_domains` dentro del fichero de configuración `/srv/www/htdocs/nextcloud/config/config.php`.
+
+![IP servidor](./images/ip-domains.png)
+
+* Abrimos un navegador URL: `172.18.24.31/nextcloud`. Ahora debe funcionar el acceso usando la IP tanto desde el propio servidor como desde otra máquina.
+
+![IP Servidor NextCloud](./images/ip-funciona.png)
+
+* Abrimos un navegador web, y ponemos en el URL: `http://localhost`
 
 ---
 
