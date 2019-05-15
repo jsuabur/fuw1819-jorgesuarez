@@ -34,7 +34,7 @@ A continuaciónles mostraré un vídeo de unos sencillos pasos de como subir y c
 
 Vamos a utilizar un servicio de almacenamiento libre, asi que utilizaremos NextCloud, aunque tambien pueden utilizar ownCloud.
 
-![](./images/.png)
+![Logo NextCloud](./images/nextcloud.png)
 
 ### 2.1. Servidor Web Apache: Instalación y configuración
 
@@ -44,13 +44,13 @@ Comando | Explicación
 `systemctl start apache2` | Iniciar Apache2.
 `systemctl enable apache2` | Inicio automático del servicio apache después de reiniciar.
 
-![Instalar Apache2](./images/.png)
+![Instalar Apache2](./images/apache.png)
 
 * Abrimos el acceso Web desde el cortafuegos
   * Vamos a `Yast` -> `Cortafuegos`
   * Añadir en `Servicios Autorizados` de la `Zona externa` a: `apache2`, `http`, `https`.
 
-![](./images/.png)
+![Acceso Web - Cortafuegos](./images/cortafueg.png)
 
 ### 2.2. PHP: Instalación y configuración
 
@@ -59,7 +59,7 @@ Comando | Explicación
 `zypper in php7 php7-mysql apache2-mod_php7` | Instalar PHP7.
 `a2enmod php7` | Habilitar mod-php
 
-![](./images/.png)
+![PHP7 Instalar y configurar](./images/php.png)
 
 ### 2.3. Database MariaDB
 
@@ -72,7 +72,7 @@ Comando | Explicación
 `systemctl enable apache2` | Inicio automático del servidor MariaDB en cada inicio.
 `mysql_secure_installation` | Configurar el servicio MariaDB con seguridad mejorada.
 
-![](./images/.png)
+![Instalación MariaDB](./images/install-maria.png)
 
 Configuración para NextCloud:
 
@@ -90,7 +90,7 @@ Configuración para NextCloud:
 
 5. `exit;` Salir de la configuración de la base de datos.
 
-![](./images/.png)
+![Configurar MariaDB](./images/configure-maria.png)
 
 ### 2.4. NextCloud
 
@@ -100,7 +100,7 @@ Comando | Explicación
 ------- | -----------
 `zypper install nextcloud` | Instalar NextCloud.
 
-![](./images/.png)
+![Instalar NextCloud](./images/install-nextclo.png)
 
 Configuración:
 
@@ -120,7 +120,7 @@ Configuración:
   - Database name: **nextcloud**
   - Hostname (como localhost)
 
-![](./images/.png)
+![Configurar NextCloud](./images/configure-nextclo.png)
 
 ---
 
