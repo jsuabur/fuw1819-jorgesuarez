@@ -144,12 +144,25 @@ Configuración:
 
 ![IP Servidor NextCloud](./images/ip-funciona.png)
 
-* Abrimos un navegador web, y ponemos en el URL: `http://localhost`
+* Abrimos un navegador web, y ponemos en el URL: `http://localhost/nextcloud`.
+* Usamos nuestro usuario/clave administrador.
+* Creamos un usuario normal `jorge24`.
+* Subiremos algunos archivos en el servidor con el usuario anterior.
+
+![Ficheros Cuenta Propia](./images/subir-jorge.png)
+
+* Creamos un usuario normal `iria12`.
+* Le decimos al compañero que suba algunos archivos al servidor con el usuario anterior.
+
+![Ficheros del compañero](./images/subir-iria.png)
 
 ---
 
 ## 4. NextCloud Desktop Client
 
+Iniciaremos una MV con Windows7:
+  * Instalar el software cliente de NextCloud.
+    * Usar URL: `http://172.18.24.31/nextcloud`
+  * Comprobar como se mantienen sincronizados los archivos entre las máquinas.
 
-
-![](./images/.png)
+![NextCloud Desktop Client](./images/nextcloud-windows.png)
