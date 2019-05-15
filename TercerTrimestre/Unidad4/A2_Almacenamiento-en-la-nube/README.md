@@ -104,9 +104,9 @@ Instalación:
 
 Comando | Explicación
 ------- | -----------
-`zypper install nextcloud` | Instalar NextCloud.
+`zypper in nextcloud` | Instalar NextCloud.
 
-![Instalar NextCloud](./images/install-nextclo.png)
+![Instalar NextCloud](./images/install-nextcloud.png)
 
 Configuración:
 
