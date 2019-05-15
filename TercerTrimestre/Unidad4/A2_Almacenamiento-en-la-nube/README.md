@@ -44,13 +44,15 @@ Comando | Explicación
 `systemctl start apache2` | Iniciar Apache2.
 `systemctl enable apache2` | Inicio automático del servicio apache después de reiniciar.
 
-![Instalar Apache2](./images/apache.png)
+![Instalar Apache2](./images/install-apache2.png)
 
 * Abrimos el acceso Web desde el cortafuegos
   * Vamos a `Yast` -> `Cortafuegos`
   * Añadir en `Servicios Autorizados` de la `Zona externa` a: `apache2`, `http`, `https`.
 
-![Acceso Web - Cortafuegos](./images/cortafueg.png)
+![Configurar Apache2](./images/configure-apache2.png)
+
+![Acceso Web - Cortafuegos](./images/cortafuegos.png)
 
 ### 2.2. PHP: Instalación y configuración
 
@@ -59,7 +61,9 @@ Comando | Explicación
 `zypper in php7 php7-mysql apache2-mod_php7` | Instalar PHP7.
 `a2enmod php7` | Habilitar mod-php
 
-![PHP7 Instalar y configurar](./images/php.png)
+![Instalar php7](./images/install-php7.png)
+
+![Configurar php7](./images/configure-php7.png)
 
 ### 2.3. Database MariaDB
 
@@ -72,7 +76,9 @@ Comando | Explicación
 `systemctl enable apache2` | Inicio automático del servidor MariaDB en cada inicio.
 `mysql_secure_installation` | Configurar el servicio MariaDB con seguridad mejorada.
 
-![Instalación MariaDB](./images/install-maria.png)
+![Instalación MariaDB](./images/install1-mariadb.png)
+
+![Instalación MariaDB](./images/install2-mariadb.png)
 
 Configuración para NextCloud:
 
@@ -90,7 +96,7 @@ Configuración para NextCloud:
 
 5. `exit;` Salir de la configuración de la base de datos.
 
-![Configurar MariaDB](./images/configure-maria.png)
+![Configurar MariaDB](./images/configure-mariadb.png)
 
 ### 2.4. NextCloud
 
