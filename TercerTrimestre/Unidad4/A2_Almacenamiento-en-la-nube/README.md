@@ -32,7 +32,7 @@ A continuaciónles mostraré un vídeo de unos sencillos pasos de como subir y c
 
 ## 2. Nube propia con NextCloud Server en OpenSUSE Leap
 
-Vamos a utilizar un servicio de almacenamiento libre, asi que utilizaremos NextCloud, aunque tambien pueden utilizar ownCloud.
+Vamos a utilizar un servicio de almacenamiento libre, asi que utilizaremos **NextCloud**, aunque tambien pueden utilizar **ownCloud**.
 
 ![Logo NextCloud](./images/nextcloud.png)
 
@@ -115,10 +115,10 @@ Configuración:
 5. Debajo de Configurar Base de Datos, selecciona,os MySQL/MariaDB
 
 6. Introducimos el usuario de MariaDB para NextCloud:
-  - Database User: **nextclouduser**
-  - Database User Password: (para nextclouduser)
-  - Database name: **nextcloud**
-  - Hostname (como localhost)
+    - Database User: **nextclouduser**
+    - Database User Password: (para nextclouduser)
+    - Database name: **nextcloud**
+    - Hostname (como localhost)
 
 ![Configurar NextCloud](./images/configure-nextclo.png)
 
