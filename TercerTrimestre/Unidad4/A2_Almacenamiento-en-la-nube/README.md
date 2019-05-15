@@ -154,7 +154,7 @@ Configuración:
 * Creamos un usuario normal `iria12`.
 * Le decimos al compañero que suba algunos archivos al servidor con el usuario anterior.
 
-![Ficheros del compañero](./images/subir-iria.png)
+![Ficheros del compañero](./images/iria12.png)
 
 ---
 
