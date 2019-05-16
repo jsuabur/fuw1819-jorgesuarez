@@ -16,7 +16,7 @@ Pasos a realizar:
 
 Yo voy a utilizar `Google Drive`
 
-![](./images/.png)
+![Google Drive](./images/google-drive.jpg)
 
 * Realizar la instalación y configuración de la herramienta elegida sobre:
   * `Windows`
