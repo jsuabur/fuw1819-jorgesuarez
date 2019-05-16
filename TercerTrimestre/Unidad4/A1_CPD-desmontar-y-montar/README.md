@@ -13,7 +13,7 @@
 ![](./images/.png)
 
 
-[![Informatica](https://jumpersoluciones.com/template/img/02.png)](https://www.youtube.com/watch?v=CTazANzywSA "Informatica")
+[![Informatica](https://jumpersoluciones.com/template/img/02.png)](https://www.youtube.com/watch?v=CTazANzywSA "Primeros pasos en Google Drive")
 ---
 
 ## 2. Desmontar
