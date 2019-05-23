@@ -53,21 +53,31 @@
 
 * Al terminar la instalación se nos muestra la IP del NAS.
   * Apuntamos la IP del NAS.
-  > En mi caso la IP es ``
+  > En mi caso la IP es `172.18.99.244`
   * Usuario/Clave del panel Web: `admin/openmediavault`
-
-![IP y usuario](./images/.png)
-
 * Entramos con el usuario `root`.
 * Ejecutamos el comando `omv-firstaid`.
   * Configuramos la IP estática para el NAS.
   * Cambiamos clave de acceso al panel Web.
 
+![IP y usuario](./images/ip-usuario.png)
+
 ---
 
 ## 3. Crear almacenamiento RAID
 
+* Desde otra máquina abrimos navegador con URL `172.1`.
+* Poner usuario/clave del panel Web.
+* Vamos a `Almacenamiento` -> `Gestión de Raid`.
+  * Creamos un `espejo` con el nombre `nasraid1`, usando los discos `sdb` y `sdc`.
 
+![](./images/.png)
+
+Creamos un nuevo sistema de archivos:
+
+Dispositivo | Nombre    | Formato | Montaje
+----------- | --------- | ------- | -------
+nasraid1    | nasdatos  | ext4    | /dev/md0
 
 ![](./images/.png)
 
