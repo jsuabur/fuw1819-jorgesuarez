@@ -66,50 +66,90 @@
 
 ## 3. Crear almacenamiento RAID
 
-* Desde otra máquina abrimos navegador con URL `172.1`.
+* Desde otra máquina abrimos navegador con URL `172.18.99.244`.
 * Poner usuario/clave del panel Web.
+
+![Panel Web](./images/panel-web.png)
+
 * Vamos a `Almacenamiento` -> `Gestión de Raid`.
   * Creamos un `espejo` con el nombre `nasraid1`, usando los discos `sdb` y `sdc`.
 
-![](./images/.png)
+![Espejo](./images/espejo.png)
 
-Creamos un nuevo sistema de archivos:
+* Creamos un nuevo sistema de archivos:
 
 Dispositivo | Nombre    | Formato | Montaje
 ----------- | --------- | ------- | -------
 nasraid1    | nasdatos  | ext4    | /dev/md0
 
-![](./images/.png)
+![Sistema de archivos](./images/nasdatos.png)
 
 ---
 
 ## 4. Crear recurso compartido
 
+* Vamos a `Servicios` -> `SMB/CIFS` -> `Compartidos`
+* Añadimos:
+  * Habilitar `SI`.
+  * Carpeta compartida -> `Crear +`.
+    * Nombre: `public`.
+    * Dispositivo: `nasraid1`.
+    * Ruta: `public/`.
+    * Con permisos de Lectura/escritura para los usuarios.
+  * Público `NO`.
+  * Sólo lectura `NO`.
 
-
-![](./images/.png)
+![Recurso compartido](./images/rec-comp.png)
 
 ---
 
 ## 5. Crear usuario
 
+* Vamos a `Permisos de Acceso` -> `Usuario`.
+  * Creamos un nuevo usuario `jorge24`.
+  * Comprobamos que pertenece al grupo `users`.
 
+![Usuario](./images/jorge24.png)
 
-![](./images/.png)
+* Vamos a `Permisos de Acceso` -> `Carpetas compartidas`.
+  * Damos permisos al usuario `jorge24` de lectura/escritura sobre la carpeta compartida.
+
+![Permisos Carpeta Compartida](./images/perm-car.png)
 
 ---
 
 ## 6. Activar el servicio
 
+* Vamos a `Servicios` -> `SMB/CIFS` -> `Configuración` -> `Opciones generales` -> `Habilitar`.
+* Vamos a `Diagnósticos` -> `Sevicios` para verificar que el servicio `SMB/CIFS` está habilitado y en ejecución.
+* Si el servicio no está en ejecución, podemos reiniciar el equipo o probar con el comando `systemctl start smbd`.
 
-
-![](./images/.png)
+![SMB/CIFS habilitado y en ejecución](./images/smb-cifs.png)
 
 ---
 
 ## 7. Comprobar
 
+**MV Windows7**
 
+* Comprobar el acceso al recurso compartido.
+* Podemos encontrar la MV más rápido poniendo `\172.18.99.244` en la búsqueda de red.
 
+![Recurso compartido Windows](./images/rec-dentro-w.png)
 
-![](./images/.png)
+* `net use` para comprobar sesiones de red abiertas.
+* `netstat -nt` para comprobar que hay una conexión establecida con el servidor.
+
+![Máquina Windows 7](./images/net-use.png)
+
+**MV GNU/Linux**
+
+* Comprobamos el acceso al recurso compartido.
+  * Abrimos explorador de archivos -> `CTRL+L`
+  * Poner URL `smb://172.18.99.244`
+
+![Recurso compartido Linux](./images/rec-dentro-l.png)
+
+* `netstat -nt` para comprobar que hay una conexión establecida con el servidor.
+
+![netstat Linux](./images/netstat-l.png)
