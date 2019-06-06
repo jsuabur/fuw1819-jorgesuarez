@@ -50,19 +50,23 @@ Necesitamos 2 MV's con Windows Server, en mi caso utilizaré `Windows Server 200
   </tr>
   <tr>
     <th>IP</th>
-    <td>172.19.24.21</td>
+    <td>172.18.24.21</td>
     <td>192.168.24.21</td>
   </tr>
   <tr>
     <th>Gateway</th>
-    <td>255.255.0.0</td>
+    <td>172.18.0.1</td>
     <td>NO</td>
   </tr>
 </table>
 
 ![Red Adaptador Puente MV1](./images/red-externa-mv1.png)
 
+![IP Adaptador Puente MV1](./images/ip-externa-mv1.png)
+
 ![Red Interna MV1](./images/red-interna-mv1.png)
+
+![IP Interna MV1](./images/ip-interna-mv1.png)
 
 * La MV Target es la encargada de ofrecer espacio de almacenamiento.
 
@@ -85,7 +89,7 @@ Necesitamos 2 MV's con Windows Server, en mi caso utilizaré `Windows Server 200
   </tr>
   <tr>
     <th>Gateway</th>
-    <td>255.255.0.0</td>
+    <td>192.168.24.21</td>
   </tr>
   <tr>
     <th>Segundo Disco</th>
@@ -95,28 +99,46 @@ Necesitamos 2 MV's con Windows Server, en mi caso utilizaré `Windows Server 200
 
 ![Red Interna MV2](./images/red-interna-mv2.png)
 
+![IP Interna MV2](./images/ip-interna-mv2.png)
+
 > **IMPORTANTE**
 > * Las IP's las pondremos todas estáticas.
 > * Las IP's de la red interna estarán en el rango 192.168.24.NN/24.
 
 ---
 
-## 2. Enlaces de interes
+## 2. Initiator: Configurar IQN
 
-* Vídeo de referencia
-  * [ES - Crear y conectar recursos iSCSI.](https://youtu.be/_77UL2kZEEA)
-* Cómo usar un TARGET hardware
-  * [How to use iSCSI target on Windows 2008 server](https://www.synology.com/en-global/knowledgebase/DSM/tutorial/Virtualization/How_to_use_iSCSI_Targets_on_a_Windows_Server)
-* INITIATOR
-  * [Guía paso a paso del iniciador Windows](https://technet.microsoft.com/es-es/library/ee338476%28v=ws.10%29.aspx)
+Las máquinas que intervienen en iSCSI usan un identificador llamado IQN. Al instalar el sistema operativo se pone un valor por defecto para el IQN. Nosotros vamos a personalizar estos valores.
+
+Vamos a cambiar el identificador IQN de nuestro iniciador.
+
+* `Herramientas` -> `iSCSI Iniciador` -> `Configurar` -> `Identificador`
+  * Poner como IQN lo siguiente: `iqn.2019-05.initiator24w`.
+
+![Initiator - IQN](./images/iqn-initiator.png)
 
 ---
 
-## 3.
+## 3. Target: Instalación
 
+### 3.1. Instalar el target
 
+* Hay que descargar el software `iSCI Target` para instalar en Windows Server (Target).
+  * Descargar iSCI Target 3.3 o superior desde la web de Microsoft.
+  * Instalar el software (version de 64 bits).
+    * `C:\iSCI_target\x64\instalar_target.msi`.
 
-![](./images/.png)
+![iSCI Target](./images/iSCI-target.png)
+
+### 3.2. Cambiar el identificar IQN
+
+Vamos a cambiar el identificador IQN de nuestro iniciador.
+
+* `Herramientas` -> `iSCSI Iniciador` -> `Configuración` -> `Cambiar`
+  * Poner como IQN lo siguiente: `iqn.2019-06.target24w`.
+
+![Target - IQN](./images/iqn-t.png)
 
 ---
 
