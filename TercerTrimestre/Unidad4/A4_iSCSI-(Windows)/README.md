@@ -27,7 +27,7 @@ El iSCSI initiator puede descargarse gratuitamente, para Windows XP y Windows se
 
 ---
 
-## 1.
+## 1. Preparativos
 
 Necesitamos 2 MV's con Windows Server, en mi caso utilizaré `Windows Server 2008`.
 
