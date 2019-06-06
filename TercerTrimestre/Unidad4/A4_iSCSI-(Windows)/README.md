@@ -31,14 +31,16 @@ El iSCSI initiator puede descargarse gratuitamente, para Windows XP y Windows se
 
 Necesitamos 2 MV's con Windows Server, en mi caso utilizaré `Windows Server 2008`.
 
-<table text-align="center">
+* La MV Initiator será la que consumirá el espacio de almacenamiento.
+
+<table>
   <tr>
     <th>MV1</th>
-    <th colspan="2">`Initiator`</th>
+    <th colspan="2">Initiator</th>
   </tr>
   <tr>
     <th>Interfaz de Red</th>
-    <th>Red puente</th>
+    <th>Red Adaptador puente</th>
     <th>Red interna</th>
   </tr>
   <tr>
@@ -49,7 +51,7 @@ Necesitamos 2 MV's con Windows Server, en mi caso utilizaré `Windows Server 200
   <tr>
     <th>IP</th>
     <td>172.19.24.21</td>
-    <td>192.168.24.22</td>
+    <td>192.168.24.21</td>
   </tr>
   <tr>
     <th>Gateway</th>
@@ -58,15 +60,55 @@ Necesitamos 2 MV's con Windows Server, en mi caso utilizaré `Windows Server 200
   </tr>
 </table>
 
-![](./images/.png)
+![Red Adaptador Puente MV1](./images/red-externa-mv1.png)
+
+![Red Interna MV1](./images/red-interna-mv1.png)
+
+* La MV Target es la encargada de ofrecer espacio de almacenamiento.
+
+<table>
+  <tr>
+    <th>MV2</th>
+    <th>Target</th>
+  </tr>
+  <tr>
+    <th>Interfaz de Red</th>
+    <th>Red interna</th>
+  </tr>
+  <tr>
+     <th>Nombre</th>
+     <td>san</td>
+  </tr>
+  <tr>
+    <th>IP</th>
+    <td>192.168.24.22</td>
+  </tr>
+  <tr>
+    <th>Gateway</th>
+    <td>255.255.0.0</td>
+  </tr>
+  <tr>
+    <th>Segundo Disco</th>
+    <td>800 MB</td>
+  </tr>
+</table>
+
+![Red Interna MV2](./images/red-interna-mv2.png)
+
+> **IMPORTANTE**
+> * Las IP's las pondremos todas estáticas.
+> * Las IP's de la red interna estarán en el rango 192.168.24.NN/24.
 
 ---
 
-## 2.
+## 2. Enlaces de interes
 
-
-
-![](./images/.png)
+* Vídeo de referencia
+  * [ES - Crear y conectar recursos iSCSI.](https://youtu.be/_77UL2kZEEA)
+* Cómo usar un TARGET hardware
+  * [How to use iSCSI target on Windows 2008 server](https://www.synology.com/en-global/knowledgebase/DSM/tutorial/Virtualization/How_to_use_iSCSI_Targets_on_a_Windows_Server)
+* INITIATOR
+  * [Guía paso a paso del iniciador Windows](https://technet.microsoft.com/es-es/library/ee338476%28v=ws.10%29.aspx)
 
 ---
 
