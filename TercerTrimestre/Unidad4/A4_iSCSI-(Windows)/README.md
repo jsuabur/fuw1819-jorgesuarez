@@ -120,6 +120,8 @@ Vamos a cambiar el identificador IQN de nuestro iniciador.
 
 ---
 
+# **¡HECHO HASTA AQUÍ!**
+
 ## 3. Target: Instalación
 
 ### 3.1. Instalar el target
