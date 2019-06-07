@@ -124,37 +124,51 @@ Las máquinas que intervienen en iSCSI usan un identificador llamado IQN. Al ins
 Vamos a cambiar el identificador IQN de nuestro iniciador.
 
 * `Herramientas` -> `iSCSI Iniciador` -> `Configurar` -> `Identificador`
-  * Poner como IQN lo siguiente: `iqn.2019-05.initiator24w`.
+  * Ponemos como IQN lo siguiente: `iqn.2019-05.initiator24w`.
 
 ![Initiator - IQN](./images/iqn-initiator.png)
 
 ---
-
-# **¡HECHO HASTA AQUÍ!**
 
 ## 3. Target: Instalación
 
 ### 3.1. Instalar el target
 
 * Hay que descargar el software `iSCI Target` para instalar en Windows Server (Target).
-  * Descargar iSCI Target 3.3 o superior desde la web de Microsoft.
-  * Instalar el software (version de 64 bits).
+  * Descargamos iSCI Target 3.3 o superior desde la web de Microsoft.
+  * Instalamos el software (version de 64 bits).
     * `C:\iSCI_target\x64\instalar_target.msi`.
 
-![iSCI Target](./images/iSCI-target.png)
+![iSCI Target](./images/iscsi-target.png)
 
 ### 3.2. Cambiar el identificar IQN
 
 Vamos a cambiar el identificador IQN de nuestro iniciador.
 
 * `Herramientas` -> `iSCSI Iniciador` -> `Configuración` -> `Cambiar`
-  * Poner como IQN lo siguiente: `iqn.2019-06.target24w`.
+  * Ponemos como IQN lo siguiente: `iqn.2019-06.target24w`.
 
-![Target - IQN](./images/iqn-t.png)
+![Target - IQN](./images/iqn-target.png)
 
 ---
 
-## 4.
+## 4. Target: Crear destino y dispositivo
+
+### 4.1. Crear un destino
+
+Los destinos (según las definiciones del protocolo iSCSI) es una definición de un espacio de almacenamiento concreto.
+
+* Creamos un nuevo destino iSCSI con:
+  * Nombre: `alumno24destino01`.
+  * Descripción: `Destino 1 - Jorge 07-06-19`
+  * Nombre del IQN del iniciador o también en avanzado podremos poner la dirección IP del `Initiator`.
+    > El identificador IQN del initiator es la forma de identificar el equipo que tendrá permitido el uso del almacenamiento que estamos creando.
+
+![Destino iSCSI](./images/destino-iscsi.png)
+
+> **¡OJO!** El iniciador tiene 2 IP's, pero se comunica con el target usando el interfaz de red de la red interna.
+
+### 4.2. Crear un dispositivo
 
 
 
@@ -163,6 +177,14 @@ Vamos a cambiar el identificador IQN de nuestro iniciador.
 ---
 
 ## 5.
+
+### 5.1. Configurar Iniciador
+
+
+
+![](./images/.png)
+
+### 5.2. Consumir almacenamiento
 
 
 
