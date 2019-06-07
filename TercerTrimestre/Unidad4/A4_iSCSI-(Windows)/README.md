@@ -184,7 +184,7 @@ Ahora vamos a añadir discos al destino que hemos creado anteriormente.
 
 ---
 
-## 5.
+## 5. Iniciador: acceder al almacenamiento
 
 ### 5.1. Configurar Iniciador
 
