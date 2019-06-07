@@ -158,7 +158,8 @@ Vamos a cambiar el identificador IQN de nuestro iniciador.
 
 Los destinos (según las definiciones del protocolo iSCSI) es una definición de un espacio de almacenamiento concreto.
 
-* Creamos un nuevo destino iSCSI con:
+* Vamos a `Herramientas administrativas` -> `Microsoft iSCSI Software Target` -> Click derecho en `Destinos iSCSI` -> `Crear destino iSCSI`.
+* Creamos un nuevo destino iSCSI:
   * Nombre: `alumno24destino01`.
   * Descripción: `Destino 1 - Jorge 07-06-19`
   * Nombre del IQN del iniciador o también en avanzado podremos poner la dirección IP del `Initiator`.
