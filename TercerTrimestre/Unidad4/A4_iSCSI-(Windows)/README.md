@@ -31,7 +31,7 @@ El iSCSI initiator puede descargarse gratuitamente, para Windows XP y Windows se
 
 Necesitamos 2 MV's con Windows Server, en mi caso utilizaré `Windows Server 2008`.
 
-#### Máquina Virtual Initiator
+**Máquina Virtual Initiator**
 
 * La MV Initiator será la que consumirá el espacio de almacenamiento.
 
@@ -62,19 +62,19 @@ Necesitamos 2 MV's con Windows Server, en mi caso utilizaré `Windows Server 200
   </tr>
 </table>
 
-**Interfaz de Red Adaptador puente**
+> **Interfaz de Red Adaptador puente**
 
 ![Red Adaptador Puente MV1](./images/red-externa-mv1.png)
 
 ![IP Adaptador Puente MV1](./images/ip-externa-mv1.png)
 
-**Interfaz de Red Interna**
+> **Interfaz de Red Interna**
 
 ![Red Interna MV1](./images/red-interna-mv1.png)
 
 ![IP Interna MV1](./images/ip-interna-mv1.png)
 
-#### Máquina Virtual Target
+**Máquina Virtual Target**
 
 * La MV Target es la encargada de ofrecer espacio de almacenamiento.
 
@@ -105,7 +105,7 @@ Necesitamos 2 MV's con Windows Server, en mi caso utilizaré `Windows Server 200
   </tr>
 </table>
 
-**Interfaz de Red Interna**
+> **Interfaz de Red Interna**
 
 ![Red Interna MV2](./images/red-interna-mv2.png)
 
