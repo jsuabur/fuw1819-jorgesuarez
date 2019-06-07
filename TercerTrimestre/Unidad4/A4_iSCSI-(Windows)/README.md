@@ -158,22 +158,29 @@ Vamos a cambiar el identificador IQN de nuestro iniciador.
 
 Los destinos (según las definiciones del protocolo iSCSI) es una definición de un espacio de almacenamiento concreto.
 
-* Vamos a `Herramientas administrativas` -> `Microsoft iSCSI Software Target` ->                              Click derecho en `Destinos iSCSI` -> `Crear destino iSCSI`.
+* Vamos a `Herramientas administrativas` -> `Microsoft iSCSI Software Target` -> Click derecho en `Destinos iSCSI` -> `Crear destino iSCSI`.
 * Creamos un nuevo destino iSCSI:
   * Nombre: `alumno24destino01`.
   * Descripción: `Destino 1 - Jorge 07-06-19`
+
+  ![Destino iSCSI](./images/destino-iscsi.png)
+
   * Nombre del IQN del iniciador o también en avanzado podremos poner la dirección IP del `Initiator`.
     > El identificador IQN del initiator es la forma de identificar el equipo que tendrá permitido el uso del almacenamiento que estamos creando.
 
-![Destino iSCSI](./images/destino-iscsi.png)
+![IQN del iniciador](./images/iqn-destino.png)
+
+![IP del iniciador](./images/direccion-ip.png)
 
 > **¡OJO!** El iniciador tiene 2 IP's, pero se comunica con el target usando el interfaz de red de la red interna.
 
 ### 4.2. Crear un dispositivo
 
+Ahora vamos a añadir discos al destino que hemos creado anteriormente.
+* Creamos disco virtual para el destino iSCSI en `E:\jorge24disco01.vhd` de tamaño 600 MB.
+* Asociamos este dispositivo con el destino 1.
 
-
-![](./images/.png)
+![Disco virtual asociado Destino 1](./images/destino-disco.png)
 
 ---
 
@@ -181,12 +188,26 @@ Los destinos (según las definiciones del protocolo iSCSI) es una definición de
 
 ### 5.1. Configurar Iniciador
 
+* Vamos al iniciador.
+> (El software Iniciador ya viene preinstalado).
 
+* Solo tenemos que configurarlo para conectar con el target.
+* `Destino` -> `IP del target`.
 
-![](./images/.png)
+![Ip Target](./images/ip-target.png)
+
+* Vamos a `Administrador del Servidor` -> `Almacenamiento` -> `Administrador de Discos`.
+* Ponemos el disco en línea haciendo click derecho en el disco.
+
+Ya tenemos el nuevo almacenamiento disponible en el `Initiator`.
+
+![Disco Virtual En Línea](./images/en-linea.png)
 
 ### 5.2. Consumir almacenamiento
 
+* Desde el `Initiator`, montamos el nuevo almacenamiento (Letras de unidad, `F` o `G`, por ejemplo).
+* Guardar varios ficheros en dichas unidades, de modo que la información que se guarde en ella se almacenará en el Target remoto.
 
+![En Línea y Montado](./images/en-linea-f.png)
 
-![](./images/.png)
+![Archivos Initiator](./images/archivos.png)
