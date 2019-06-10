@@ -11,7 +11,7 @@
 * Para tener una descripción más completa buscamos la Guía del Usuario del servidor.
   * [Guía de usuario del servidor Poweredge 1400SC](https://downloads.dell.com/manuals/all-products/esuprt_ser_stor_net/esuprt_poweredge/poweredge-1400sc_user%27s%20guide_es-mx.pdf)
 
-* Aparte de ese servidor utilizamos un servidor Blade.
+* Aparte de ese servidor utilizamos un servidor `Blade`.
 
 
 
@@ -31,7 +31,7 @@
 
 ## 4. Vídeo demostración
 
-Aquí les dejo el vídeo en el que explicamos los pasos seguidos, características del servidor y el montaje y desmontaje del mismo.
+Aquí les dejo el vídeo en el que explicamos los pasos seguidos, características del servidor `Dell` y `Blade` y el montaje y desmontaje de los mismos.
 
 > Pinchar en la imagen y les llevará directamente al vídeo
 
