@@ -33,6 +33,6 @@
 
 Aquí les dejo el vídeo en el que explicamos los pasos seguidos, características del servidor `Dell` y `Blade` y el montaje y desmontaje de los mismos.
 
-> Pinchar en la siguiente imagen que les llevará directamente al vídeo.
+> Pinchar en la siguiente imagen y les llevará directamente al vídeo.
 
 [![Taller CPD (desmontar y montar - FUW)](./images/desmontar-y-montar.png)](https://www.youtube.com/watch?v=-xsDKaiB1uI "Taller CPD (desmontar y montar) - FUW")
