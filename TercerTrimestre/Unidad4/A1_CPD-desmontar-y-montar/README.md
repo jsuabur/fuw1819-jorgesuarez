@@ -5,16 +5,15 @@
 
 ## 1. Recoger
 
-* Recogemos un servidor asignado por el profesor. Debe tener una identificación pegada. En nuestro caso, utilizamos ``
-* Recogemos la ficha del equipo ``
+* Recogemos un servidor asignado por el profesor. Debe tener una identificación pegada. En nuestro caso, utilizamos el `NIBBLER`
+* Recogemos la ficha del equipo `NIBBLER`
+* El Servidor es un `Fell Poweredge 1400SC`
+* Para tener una descripción más completa buscamos la Guía del Usuario del servidor.
+  * [Guía de usuario del servidor Poweredge 1400SC](https://downloads.dell.com/manuals/all-products/esuprt_ser_stor_net/esuprt_poweredge/poweredge-1400sc_user%27s%20guide_es-mx.pdf)
 
-![](./images/.png)
+* Aparte de ese servidor utilizamos un servidor Blade.
 
-![](./images/.png)
 
-> Pinchar en la imagen y les llevará directamente al vídeo
-
-[![Informatica](https://jumpersoluciones.com/template/img/02.png)](https://www.youtube.com/watch?v=CTazANzywSA "Primeros pasos en Google Drive")
 
 ---
 
@@ -29,3 +28,11 @@
 
 
 ---
+
+## 4. Vídeo demostración
+
+Aquí les dejo el vídeo en el que explicamos los pasos seguidos, características del servidor y el montaje y desmontaje del mismo.
+
+> Pinchar en la imagen y les llevará directamente al vídeo
+
+[![Taller CPD (desmontar y montar - FUW)](./images/desmontar-y-montar.png)](https://www.youtube.com/watch?v=-xsDKaiB1uI "Taller CPD (desmontar y montar) - FUW")
