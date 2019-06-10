@@ -16,12 +16,13 @@ Es decir, una buena forma de montarnos una SAN.
 La solución consta de al menos dos componentes.
 Un iSCSI Initiator y un Target.
 
-**Initiator**
-Es lo que utilizamos en el equipo que va a acceder a esos volúmenes.
+* Initiator
+  * Es lo que utilizamos en el equipo que va a acceder a esos volúmenes.
 
-**Target**
-Es lo que nos permitirá crear el sistema de almacenamiento compartido, y el que
-permitirá el acceso a las LUNs que se hayan creado a cada cliente específico.
+* Target
+  * Es lo que nos permitirá crear el sistema de almacenamiento compartido,
+  y el que permitirá el acceso a las LUNs que se hayan creado a cada
+  cliente específico.
 
 Generalmente esta tecnología está ya incluida en el propio hardware de los
 servidores y de los sistemas SAN, que ofrecen este tipo de conectividad
