@@ -16,10 +16,13 @@ Es decir, una buena forma de montarnos una SAN.
 La solución consta de al menos dos componentes.
 Un iSCSI Initiator y un Target.
 
+Primer termino
+ : Es lo que utilizamos en el equipo que va a acceder a esos volúmenes.
+
 Initiator
 :     Es lo que utilizamos en el equipo que va a acceder a esos volúmenes.
 
-Target
+**Target**
 :     Es lo que nos permitirá crear el sistema de almacenamiento compartido, y el que
 :     permitirá el acceso a las LUNs que se hayan creado a cada cliente específico.
 
@@ -31,9 +34,6 @@ El iSCSI initiator puede descargarse gratuitamente, para Windows XP y Windows se
 ```
 
 ---
-
-Aprendo
-:     Hola
 
 ## 1. Preparativos
 
