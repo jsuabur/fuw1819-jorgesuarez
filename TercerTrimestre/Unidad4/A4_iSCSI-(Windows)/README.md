@@ -17,11 +17,11 @@ La solución consta de al menos dos componentes.
 Un iSCSI Initiator y un Target.
 
 Initiator
-: Es lo que utilizamos en el equipo que va a acceder a esos volúmenes.
+:     Es lo que utilizamos en el equipo que va a acceder a esos volúmenes.
 
 Target
-: Es lo que nos permitirá crear el sistema de almacenamiento compartido, y el que
-: permitirá el acceso a las LUNs que se hayan creado a cada cliente específico.
+:     Es lo que nos permitirá crear el sistema de almacenamiento compartido, y el que
+:     permitirá el acceso a las LUNs que se hayan creado a cada cliente específico.
 
 Generalmente esta tecnología está ya incluida en el propio hardware de los servidores y de los sistemas SAN, que ofrecen este tipo de conectividad a través de dispositivos multifunción.
 
@@ -31,6 +31,9 @@ El iSCSI initiator puede descargarse gratuitamente, para Windows XP y Windows se
 ```
 
 ---
+
+Aprendo
+:     Hola
 
 ## 1. Preparativos
 
