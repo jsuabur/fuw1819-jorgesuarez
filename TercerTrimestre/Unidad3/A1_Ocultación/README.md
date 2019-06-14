@@ -3,7 +3,7 @@
 
 ---
 
-## Encriptación
+## 1. Encriptación
 
 ### 1.1. Encriptado simétrico
 
@@ -50,6 +50,8 @@ Genera un par de claves pública/privada.
 **Alumno1**
 
 * Alumno1 desencripta el fichero `gpg -d mensaje2-alumno23.txt.gpg`.
+
+---
 
 ## 2. Firma
 
