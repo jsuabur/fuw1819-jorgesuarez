@@ -11,7 +11,7 @@ Bienvenidos a mi glosario sobre los informes de las actividades desarrolladas en
 
 - Segundo Trimestre
   - Unidad2
-    -[A4 Recuperación de datos](./SegundoTrimestre/Unidad2/A4_Recuperacion-de-datos)
+    - [A4 - Recuperación de datos](./SegundoTrimestre/Unidad2/A4_Recuperacion-de-datos)
 - Tercer Trimestre
   - Unidad3
     - [A1 - Ocultación](./TercerTrimestre/Unidad3/A1_Ocultacion)
