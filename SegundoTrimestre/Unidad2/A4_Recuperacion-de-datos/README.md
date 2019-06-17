@@ -1,7 +1,6 @@
 
 # Recuperación de datos
 
-# ¡EN CONSTRUCCIÓN!
 ---
 
 ## 1. Introducción
