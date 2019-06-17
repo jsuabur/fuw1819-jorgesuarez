@@ -8,7 +8,11 @@
 
 * Añadimos un segundo disco duro `(sdb)` a la MV OpenSUSE de 10MB con el nombre *roto*.
 
+![Disco roto](./images/disco-roto.png)
+
 * Iniciamos la MV y usamos la herramienta `Particionador` de Yast, para crear una partición primaria que coja todo el segundo disco y le daremos formato `ext2`.
+
+![Formatear](./images/ext2.png)
 
 * Creamos el directorio `/mnt/disco_roto`.
 
@@ -19,19 +23,28 @@
   * `df -hT`
   * `mount | grep disco_roto`
 
+![Comprobacion montar](./images/comprobacion-1.png)
+
 * Copiamos/Descargamos en dicha partición `(sdb1)` 3 ficheros:
   * `FILE1`: Fichero PDF
   * `FILE2`: Imagen/foto
   * `FILE3`: Canción y/o vídeo
   * Comprobamos que están con `ls /mnt/disco_roto`
+
+![Ficheros](./images/files.png)
+
 * Ahora borramos `FILE1`, `FILE2` y `FILE3` usando los comandos habituales de borrado. Si borramos por el entorno gráfico, además debemos vaciar la papelera.
 * Feedback de comprobación `ls /mnt/disco_roto`
+
+![Borrar archivos](./images/borrado.png)
 
 * Desmontamos el disco "roto".
   * Feedback de comprobación:
     * `df -hT`
     * `mount | grep roto`
   * Si no podemos desmontar el disco, probablemente es que lo estamos usando. Con el comando `lsof | grep disco_roto`, podemos visualizar qué o quién está usando el disco.
+
+![Disco roto](./images/desmontado.png)
 
 ---
 
@@ -40,6 +53,8 @@
 Antes de recuperar los archivos del disco "roto" (sdb) vamos hacer una clonación
 device-device del mismo. Al disco clonado lo llamaremos disco `alfa`. Apartir de
 ahora los procesos de recuperación los haremos siempre con el disco `alfa`.
+
+![](./images/disco-alfa.png)
 
 > La recuperación se debe hacer siempre en una copia y nunca en el disco original
 para evitar que los procesos de recuperación afecten a la integridad del disco
@@ -50,6 +65,8 @@ llamaremos `alfa` en VirtualBox.
 * Iniciamos la MV. Deben estar los 3 discos. Feeback de comprobación: `fdisk -l`.
 Además vemos que el disco B tiene una partición y el disco C no.
 * Los discos "roto" y "alfa" no deben estar montados. Comprobamos con `df -hT` y `mount`.
+
+![](./images/.png)
 
 Ahora vamos a clonar el disco "roto" en el "alfa". Ya hemos usado alguna herramienta
 de clonación (Clonezilla) pero en este caso vamos a usar el comando `dd`.
@@ -64,6 +81,8 @@ Ejemplo: `dd if=/dev/sdb of=/dev/sdc`.
     * Si todo va bien no muestra ningún mensaje.
     * Si va mal nos dice que son diferentes.
 * `fdisk -l`,vemos que el disco C ahora si tiene una partición y el mismo formato que el B.
+
+![](./images/.png)
 
 **A partir de ahora, todas las pruebas las haremos en el disco `alfa`.**
 
@@ -87,6 +106,8 @@ Listado de algunas herramientas de recuperación:
 * *Scalpel.*
     * Ejemplo de uso: `scalpel /dev/dispositivo -o salida-scalpel`
 
+![](./images/.png)
+
 ### 3.2. Instalando PhotoRec
 
 Primero tenemos que conseguir la herramienta de recuperación PhotoRec.
@@ -101,6 +122,7 @@ Instalamos el programa en nuestro sistema.
 > * Kali GNU/Linux (Descargar de leela).
 > * Tails GNU/Linux (Descargar de la web).
 
+![](./images/.png)
 
 ### 3.3. Recuperando con PhotoRec
 
@@ -145,6 +167,7 @@ Estos son las claves de acceso de las naves imperiales.
 * Desmontamos la partición.
 * `cat /dev/sdc1 | more `...¿qué estamos viendo?
 
+![](./images/.png)
 
 ---
 
@@ -152,6 +175,8 @@ Estos son las claves de acceso de las naves imperiales.
 
 Hemos visto que aunque borremos un archivo todavía existen formas de recuperar dichos datos.
 Ahora vamos a ver cómo realizar un borrado seguro.
+
+![](./images/.png)
 
 > **¿De verdad?**
 >
@@ -174,7 +199,6 @@ de por qué pasa esto la tenemos en el siguiente
 
 ### 5.2. Proceso de borrado seguro
 
-
 * Creamos un disco nuevo VirtualBox de 10MB. A este disco lo llamaremos "limpio".
 * Iniciamos la MV.
 * Creamos la carpeta `disco_limpio` en `/mnt`.
@@ -193,6 +217,8 @@ Feedback de comprobación: `df -hT`, `mount | grep disco`
 * Ahora ejecutamos el proceso de recuperación. ¿Se consigue recuperar algún archivo?
  ¿Todos? ¿Cuáles no se han podido recuperar?
 
+![](./images/.png)
+
 ---
 
 ## 6. Recuperar esquema de particionado
@@ -207,3 +233,5 @@ Vamos a intentar recuperar un esquema de particionado dañado.
 * Ahora no se puede acceder a la partición sdc1.
 * Ejecutamos comando `testdisk` para iniciar la herramienta TestDisk, que nos servirá para recuperar el esquema de particionado.
 * Ahora se debería poder acceder a la partición sdc1.
+
+![](./images/.png)
