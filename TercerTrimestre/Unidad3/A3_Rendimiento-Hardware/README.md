@@ -30,7 +30,7 @@ Vamos a estudiar el rendimiento de dos equipos, monitorizando el hardware, y opt
 * CPU
   * *Intel CORE i5*
 * RAM
-  * *8GB*
+  * *8 GB*
 * Discos duros
   * *Disco1: 100 MB*
   * *Disco2: 1 TB*
