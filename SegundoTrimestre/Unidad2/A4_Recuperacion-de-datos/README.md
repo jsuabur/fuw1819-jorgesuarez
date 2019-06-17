@@ -4,7 +4,13 @@
 # ¡EN CONSTRUCCIÓN!
 ---
 
-## 1. Preparar el disco roto
+## 1. Introducción
+
+* En esta actividad vamos a practicar el borrado de ficheros y su recuperación.
+* Realizaremos la práctica de forma individual.
+* Vamos a usar una MV OpenSUSE
+
+## 2. Preparar el disco roto
 
 * Añadimos un segundo disco duro `(sdb)` a la MV OpenSUSE de 10MB con el nombre *roto*.
 
@@ -48,13 +54,13 @@
 
 ---
 
-## 2. Clonación alfa
+## 3. Clonación alfa
 
 Antes de recuperar los archivos del disco "roto" (sdb) vamos hacer una clonación
 device-device del mismo. Al disco clonado lo llamaremos disco `alfa`. Apartir de
 ahora los procesos de recuperación los haremos siempre con el disco `alfa`.
 
-![](./images/disco-alfa.png)
+![Disco alfa de 10MB](./images/disco-alfa.png)
 
 > La recuperación se debe hacer siempre en una copia y nunca en el disco original
 para evitar que los procesos de recuperación afecten a la integridad del disco
@@ -64,9 +70,12 @@ para evitar que los procesos de recuperación afecten a la integridad del disco
 llamaremos `alfa` en VirtualBox.
 * Iniciamos la MV. Deben estar los 3 discos. Feeback de comprobación: `fdisk -l`.
 Además vemos que el disco B tiene una partición y el disco C no.
+
+![Discos y la particion de b](./images/discos-bc.png)
+
 * Los discos "roto" y "alfa" no deben estar montados. Comprobamos con `df -hT` y `mount`.
 
-![](./images/.png)
+![Discos no montados](./images/no-montados.png)
 
 Ahora vamos a clonar el disco "roto" en el "alfa". Ya hemos usado alguna herramienta
 de clonación (Clonezilla) pero en este caso vamos a usar el comando `dd`.
@@ -80,9 +89,12 @@ Ejemplo: `dd if=/dev/sdb of=/dev/sdc`.
 * `diff /dev/sdb1 /dev/sdc1` comando para comprobar que ambas particiones son idénticas.
     * Si todo va bien no muestra ningún mensaje.
     * Si va mal nos dice que son diferentes.
+
+![Device-Device](./images/clonacion.png)
+
 * `fdisk -l`,vemos que el disco C ahora si tiene una partición y el mismo formato que el B.
 
-![](./images/.png)
+![Particiones](./images/particion-doble.png)
 
 **A partir de ahora, todas las pruebas las haremos en el disco `alfa`.**
 
@@ -91,9 +103,9 @@ lo guardaríamos en sitio seguro. No es necesario hacerlo en la práctica.
 
 ---
 
-## 3. Recuperación
+## 4. Recuperación
 
-### 3.1. Herramientas de recuperación
+### 4.1. Herramientas de recuperación
 
 Listado de algunas herramientas de recuperación:
 * *PhotoRec:* Se usa para recuperar archivos eliminados.
@@ -106,25 +118,25 @@ Listado de algunas herramientas de recuperación:
 * *Scalpel.*
     * Ejemplo de uso: `scalpel /dev/dispositivo -o salida-scalpel`
 
-![](./images/.png)
+![PhotoRec](./images/photorec.png)
 
-### 3.2. Instalando PhotoRec
+### 4.2. Instalando PhotoRec
 
 Primero tenemos que conseguir la herramienta de recuperación PhotoRec.
 
 Instalamos el programa en nuestro sistema.
 * `zypper in photorec qphotorec`, instalación de paquetes en OpenSUSE.
 * Reiniciamos la MV.
-* Feedback de comprobación `zypper search nombre-programa`.
+* Feedback de comprobación `zypper se photorec`.
 
 > También podríamos usar alguna distribución DVD-Live que venga con dicha herramienta, como por ejemplo:
 > * Caine7 (Descargar de Leela).
 > * Kali GNU/Linux (Descargar de leela).
 > * Tails GNU/Linux (Descargar de la web).
 
-![](./images/.png)
+![Instalar paquetes](./images/instalado.png)
 
-### 3.3. Recuperando con PhotoRec
+### 4.3. Recuperando con PhotoRec
 
 Vamos a iniciar el proceso de recuperación sobre la partición del disco `alfa`.
 * Desmontamos el disco `alfa`.
@@ -133,16 +145,15 @@ Vamos a iniciar el proceso de recuperación sobre la partición del disco `alfa`
 
 Ejemplo de uso de qphotorec:
 
-![](./images/rescue-qphotorec-01.png)
-
 * Los archivos que se recuperen no deben escribirse en el disco `alfa`.
+
+![Recuperar con Photorec](./images/encontrados.png)
 
 > La carpeta con los archivos recuperados NO deben estar en el disco `alfa` ni en el disco `roto`.
 
-
 ---
 
-## 4. Recuperar ficheros de texto plano
+## 5. Recuperar ficheros de texto plano
 
 Supongamos que no hemos podido recuperar el fichero de texto con las herramientas anteriores,
 entonces vamos a probar de otra forma.
@@ -163,75 +174,12 @@ Estos son las claves de acceso de las naves imperiales.
 ===============
 ```
 
+![Fichero Secreto](./images/secreto.png)
+
 * Borramos el archivo de texto con `rm`.
 * Desmontamos la partición.
 * `cat /dev/sdc1 | more `...¿qué estamos viendo?
 
-![](./images/.png)
+![Fichero Secreto](./images/secreto-encontrado.png)
 
 ---
-
-## 5. Borrado seguro
-
-Hemos visto que aunque borremos un archivo todavía existen formas de recuperar dichos datos.
-Ahora vamos a ver cómo realizar un borrado seguro.
-
-![](./images/.png)
-
-> **¿De verdad?**
->
-> Las herramientas de borrado seguro deben ejecutarse un número de veces (35 normalmente)
-para que podamos decir (¿seguro?) que hemos logrado un borrado efectivo. La explicación
-de por qué pasa esto la tenemos en el siguiente
-[artículo](http://www.eldiario.es/hojaderouter/tecnologia/hardware/archivos-eliminacion-recuperacion-disco_duro-papelera_de_reciclaje_0_495201286.html)  
->
-> Ante la duda, y para segurarse, muchas empresas recurren a la destrucción física de los disco.
->
-
-### 5.1. Herramientas de borrado seguro
-
-> Información sobre la herramienta SHRED:
-> * [Cómo hacer borrado seguro con shred](http://www.welivesecurity.com/la-es/2014/11/24/como-hacer-borrado-seguro-shred-linux/).
-> * [Borrado seguro de archivos con Shred](http://www.linuxtotal.com.mx/index.php?cont=info_seyre_008)
->
-> Información sobre `dd`:
-> * `dd if=/dev/zero of=FILE2`: Llena el contenido del fichero FILE2 con ceros.
-
-### 5.2. Proceso de borrado seguro
-
-* Creamos un disco nuevo VirtualBox de 10MB. A este disco lo llamaremos "limpio".
-* Iniciamos la MV.
-* Creamos la carpeta `disco_limpio` en `/mnt`.
-* Montamos el disco `limpio` en la ruta `/mnt/disco_limpio`.
-Feedback de comprobación: `df -hT`, `mount | grep disco`
-* Volvemos a crear/descargar 3 archivos para eliminar en el disco `limpio`.
-    * `FILE1`: Un fichero PDF.
-    * `FILE2`: Una imagen/foto (png).
-    * `FILE3`: Una canción y/o vídeo.
-    * Feedback de comprobación: `ls /mnt/disco_limpio`.
-* A continuación
-    * Borramos FILE1 con el comando habitual.
-    * Borramos FILE2 con herramienta de borrado seguro (shred).
-    * Borramos FILE3 con el comando habitual.
-    * Feedback de comprobación: `ls /mnt/disco_limpio`.
-* Ahora ejecutamos el proceso de recuperación. ¿Se consigue recuperar algún archivo?
- ¿Todos? ¿Cuáles no se han podido recuperar?
-
-![](./images/.png)
-
----
-
-## 6. Recuperar esquema de particionado
-
-**OJO: Para esta parte vamos a usar discos con particiones MBR.**
-
-Vamos a intentar recuperar un esquema de particionado dañado.
-
-* `fdisk -l |grep sdc`, comprobamos que se detecta la partición.
-* `dd if=/dev/zero of=/dev/sdc bs=512 count=1`, escribimos ceros en el sector 0 del disco sdc. Destruyendo el esquema de particiones de dicho disco.
-* `fdisk -l |grep sdc`, comprobamos que ha desaparecido la partición.
-* Ahora no se puede acceder a la partición sdc1.
-* Ejecutamos comando `testdisk` para iniciar la herramienta TestDisk, que nos servirá para recuperar el esquema de particionado.
-* Ahora se debería poder acceder a la partición sdc1.
-
-![](./images/.png)
