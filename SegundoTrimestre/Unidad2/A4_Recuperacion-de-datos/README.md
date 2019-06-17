@@ -7,7 +7,7 @@
 
 * En esta actividad vamos a practicar el borrado de ficheros y su recuperación.
 * Realizaremos la práctica de forma individual.
-* Vamos a usar una MV OpenSUSE
+* Vamos a usar una MV OpenSUSE.
 
 ---
 
