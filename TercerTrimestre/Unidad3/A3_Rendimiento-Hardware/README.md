@@ -65,19 +65,19 @@ Ejecutar las siguientes herramientas:
 
 **Inventario - Hardinfo**
 
-![Hardinfo](./images/.png)
+![Hardinfo](./images/hardinfo.png)
 
 **CPU - Phoronix-test-suite**
 
-![Phoronix-test-suite](./images/.png)
+![Phoronix-test-suite](./images/phoronix.png)
 
 **RAM - Memtest86+**
 
-![Memtest86+](./images/.png)
+![Memtest86+](./images/memtest.png)
 
 **Discos - SmartMonTools**
 
-![SmartMonTools](./images/.png)
+![SmartMonTools](./images/smart.png)
 
 > Otros programas que pueden ser de utilidad:
 >
