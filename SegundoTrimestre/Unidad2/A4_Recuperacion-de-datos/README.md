@@ -9,6 +9,8 @@
 * Realizaremos la práctica de forma individual.
 * Vamos a usar una MV OpenSUSE
 
+---
+
 ## 2. Preparar el disco roto
 
 * Añadimos un segundo disco duro `(sdb)` a la MV OpenSUSE de 10MB con el nombre *roto*.
