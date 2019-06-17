@@ -3,7 +3,9 @@
 
 ---
 
-##1. Introducción
+## 1. Introducción
+
+Vamos a estudiar el rendimiento de dos equipos, monitorizando el hardware, y optimizando el sistema.
 
 ## 2. Preparativos
 
@@ -61,6 +63,30 @@ Ejecutar las siguientes herramientas:
 | RAM | Comprobar la RAM | Memtest86+ | Memtest86+ |
 | Discos | Rendimiento de los discos duros | HD tune | SmartMonTools: monitorización de los discos usando el sistema S.M.A.R.T. de los propios discos |
 | T. Gráfica | Rendimiento de la tarjeta gráfica | GPU‐Z (En las máquinas virtuales no muestra información) | FurMark: para hacer pruebas de estrés de la tarjeta gráfica.|
+
+**Inventario - Hardinfo**
+
+
+
+![Hardinfo](./images/.png)
+
+**CPU - LMBench**
+
+
+
+![LMBench](./images/.png)
+
+**RAM - Memtest86+**
+
+
+
+![Memtest86+](./images/.png)
+
+**Discos - SmartMonTools**
+
+
+
+![SmartMonTools](./images/.png)
 
 > Otros programas que pueden ser de utilidad:
 >
