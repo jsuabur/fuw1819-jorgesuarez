@@ -71,13 +71,13 @@ Ejecutar las siguientes herramientas:
 
 ![Phoronix-test-suite](./images/phoronix.png)
 
-**RAM - Memtest86+**
+**RAM**
 
-![Memtest86+](./images/memtest.png)
+![Memtest86+](./images/memoria.png)
 
-**Discos - SmartMonTools**
+**Discos**
 
-![SmartMonTools](./images/smart.png)
+![Discos](./images/discos.png)
 
 > Otros programas que pueden ser de utilidad:
 >
