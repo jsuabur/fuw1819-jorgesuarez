@@ -56,35 +56,26 @@ Vamos a estudiar el rendimiento de dos equipos, monitorizando el hardware, y opt
 
 Ejecutar las siguientes herramientas:
 
-| Categoría | Herramienta | Windows | GNU/Linux |
-| --------- | ----------- | ------- | --------- |
-| Inventario | Realizar inventariado del equipo | AIDA/EVEREST (Home Edition), Speccy | Hardinfo |
-| CPU | Rendimiento de la CPU | CPU‐Z | Test de rendimiento: LMBench, Phoronix-test-suite |
-| RAM | Comprobar la RAM | Memtest86+ | Memtest86+ |
-| Discos | Rendimiento de los discos duros | HD tune | SmartMonTools: monitorización de los discos usando el sistema S.M.A.R.T. de los propios discos |
-| T. Gráfica | Rendimiento de la tarjeta gráfica | GPU‐Z (En las máquinas virtuales no muestra información) | FurMark: para hacer pruebas de estrés de la tarjeta gráfica.|
+| Categoría | Herramienta | GNU/Linux |
+| --------- | ----------- |  --------- |
+| Inventario | Realizar inventariado del equipo | Hardinfo |
+| CPU | Rendimiento de la CPU | Phoronix-test-suite |
+| RAM | Comprobar la RAM | Memtest86+ |
+| Discos | Rendimiento de los discos duros | SmartMonTools: monitorización de los discos usando el sistema S.M.A.R.T. de los propios discos |
 
 **Inventario - Hardinfo**
 
-
-
 ![Hardinfo](./images/.png)
 
-**CPU - LMBench**
+**CPU - Phoronix-test-suite**
 
-
-
-![LMBench](./images/.png)
+![Phoronix-test-suite](./images/.png)
 
 **RAM - Memtest86+**
-
-
 
 ![Memtest86+](./images/.png)
 
 **Discos - SmartMonTools**
-
-
 
 ![SmartMonTools](./images/.png)
 
@@ -98,6 +89,5 @@ Ejecutar las siguientes herramientas:
 > | CPU | CPUCool | HW Monitor |
 > | CPU | CPUBurn | pruebas de estrés de la CPU (PELIGROSO; úsalo bajo tu propia responsabilidad; vigilar la temperatura del micro cuando se hagan las pruebas). Para microprocesadores Intel(burnP6). Para micros AMD (burnK7) |
 > | Discos | GParted | Herramienta de gestión de particiones |
-> | T. Gráfica | XNVCtrl | Monitorización de GPUs de NVIDIA |
 
 ---
